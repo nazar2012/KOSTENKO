@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ліна Костенко</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide {
+            display: none;
+            animation: fade 1s;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        img {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            margin: 15px;
+            padding: 12px 20px;
+            border: none;
+            background: #8B0000;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #A52A2A;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide active">
+            <h1>Ліна Костенко</h1>
+            <img src="data:image/jpeg;base64,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" alt="Ліна Костенко">
+            <p><strong>Ліна Василівна Костенко</strong> – одна з найвидатніших українських поетес.</p>
+        </div>
+        <div class="slide">
+            <h2>Дитинство</h2>
+            <p>Ліна Костенко народилася 19 березня 1930 року у Ржищеві, в родині вчителів. З дитинства захоплювалася
+                літературою та мистецтвом.</p>
+        </div>
+        <div class="slide">
+            <h2>Освіта</h2>
+            <p>Закінчила Київський університет та Московський Літературний інститут. Під час навчання проявила себе як
+                талановита поетеса.</p>
+        </div>
+        <div class="slide">
+            <h2>Творчість</h2>
+            <p>Її поезія охоплює історичні, філософські та соціальні теми. Вона працювала не тільки над поезією, а й над
+                прозою та есеїстикою.</p>
+        </div>
+        <div class="slide">
+            <h2>Основні твори</h2>
+            <ul>
+                <li>«Маруся Чурай»</li>
+                <li>«Записки українського самашедшого»</li>
+                <li>«Берестечко»</li>
+                <li>«Над берегами вічної ріки»</li>
+                <li>«Софія»</li>
+                <li>«Танок на майдані Конго»</li>
+            </ul>
+        </div>
+        <div class="slide">
+            <h2>Нагороди</h2>
+            <p>Лауреат Шевченківської премії, численних літературних нагород. Її творчість високо оцінювали як в
+                Україні, так і за її межами.</p>
+        </div>
+        <div class="slide">
+            <h2>Цікаві факти</h2>
+            <p>Відмовилася від звання Героя України, бо вважає його недоречним. Вона також активно підтримує національну
+                ідентичність та мову.</p>
+        </div>
+        <div class="slide">
+            <h2>Цитати</h2>
+            <p>«Коли в людини є народ, тоді вона уже людина»</p>
+            <p>«Поезія – це завжди неповторність»</p>
+            <p>«Життя – це не пошук того, що ти хочеш, а створення того, чого ти потребуєш.»</p>
+        </div>
+        <div class="slide">
+            <h2>Спадщина</h2>
+            <p>Залишила величезний внесок у розвиток української літератури. Її поезія надихає нові покоління митців і
+                читачів.</p>
+        </div>
+        <div class="slide">
+            <h2>Політичні погляди</h2>
+            <p>Ліна Костенко була активною громадською постаттю, її погляди на політику і незалежність України часто
+                ставали предметом обговорення.</p>
+        </div>
+        <button onclick="prevSlide()">&#9665; Назад</button>
+        <button onclick="nextSlide()">Вперед &#9655;</button>
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[i].classList.add('active');
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        }
+    </script>
+</body>
+
+</html>
